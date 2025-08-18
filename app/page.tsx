@@ -1,12 +1,7 @@
-"use client";
+import dynamic from "next/dynamic";
 
-import { useEffect, useState } from "react";
-import * as THREE from "three";
+const ThreeScreen = dynamic(() => import("@/component/three"));
 
 export default function Home() {
-  return (
-    <div className="three-home">
-      <p>Three Home</p>
-    </div>
-  );
+  return <ThreeScreen />;
 }
